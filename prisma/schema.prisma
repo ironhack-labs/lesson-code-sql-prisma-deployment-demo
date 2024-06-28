@@ -18,7 +18,6 @@ model Book {
   title         String
   year          Int
   numberOfPages Int?
-  publisher     String
   summary       String?
   quantity      Int      @default(0)
   genre         String[]
