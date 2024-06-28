@@ -21,9 +21,6 @@ app.use("/api", bookRoutes);
 const authorRoutes = require("./routes/author.routes");
 app.use("/api", authorRoutes);  
 
-const movieRoutes = require("./routes/movie.routes");
-app.use("/api", movieRoutes);
-
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
