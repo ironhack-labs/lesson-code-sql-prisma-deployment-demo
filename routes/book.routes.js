@@ -7,11 +7,12 @@ const prisma = require("../db/index");
 
 //  POST /api/books  -  Creates a new book
 router.post("/books", (req, res, next) => {
-    const { title, year, summary, quantity, genre, authorId } = req.body;
+    const { title, year, numberOfPages, summary, quantity, genre, authorId } = req.body;
 
     const newBook = {
         title,
         year,
+        numberOfPages,
         summary,
         quantity,
         genre,
@@ -69,11 +70,12 @@ router.get("/books/:bookId", (req, res, next) => {
 router.put("/books/:bookId", (req, res, next) => {
     const { bookId } = req.params;
 
-    const { title, year, summary, quantity, genre, authorId } = req.body;
+    const { title, year, numberOfPages, summary, quantity, genre, authorId } = req.body;
 
     const newBookDetails = {
         title,
         year,
+        numberOfPages,
         summary,
         quantity,
         genre,
